@@ -1,6 +1,6 @@
-# vue-atomic-demo
+# vue-atomic-template
 
-> Demo for vue-atomic project.
+> Template for vue-atomic projects.
 
 ## Build Setup
 
@@ -8,8 +8,8 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
+# serve with hot reload at localhost:8000
+npm start
 
 # build for production with minification
 npm run build
