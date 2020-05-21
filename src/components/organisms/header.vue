@@ -17,24 +17,19 @@
           {{ pageTitle }}
         </div>
         <div class="a-logo">
-          HARCMAP
+          {{ APP_NAME }}
         </div>
       </template>
       <div v-else class="a-logo f-big">
-        HARCMAP
+        {{ APP_NAME }}
       </div>
     </div>
-    <div
-      class="f-flex f-flex-row f-flex-al-center"
-    >
-      <icon-star :size="24"/>
-    </div>
+    <div style="width: 52px"></div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
-import IconStar from 'icons/Star.vue';
 import AButtonIcon from 'atoms/button/icon';
 import IconArrowLeft from 'icons/ArrowLeft.vue';
 import { ROUTES } from 'utils/macros/routes';
@@ -44,7 +39,6 @@ export default {
   components: {
     AButtonIcon,
     IconArrowLeft,
-    IconStar,
   },
   computed: {
     ...mapGetters('header', [

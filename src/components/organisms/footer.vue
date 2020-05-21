@@ -17,9 +17,12 @@
 
 <script>
 import { mapMutations } from 'vuex';
-import IconMenu from 'icons/Menu.vue';
+import IconHome from 'icons/Home';
+import IconAccountCircle from 'icons/AccountCircle';
+import IconMenu from 'icons/Menu';
 import IconArrowRight from 'icons/ArrowRight';
 import AButtonIconFooter from 'atoms/button/icon-footer';
+import { ROUTES } from 'utils/macros/routes';
 import { logical } from 'utils/logical';
 
 export default {
@@ -50,6 +53,14 @@ export default {
     },
     getIcons () {
       return [
+        {
+          ...ROUTES.welcome,
+          component: IconHome,
+        },
+        {
+          ...ROUTES.about,
+          component: IconAccountCircle,
+        },
         {
           label: 'Menu',
           component: this.$store.getters['menu/isOpen'] ? IconArrowRight : IconMenu,

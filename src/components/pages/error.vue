@@ -4,12 +4,12 @@
       404
     </div>
     <div>
-      Cześć! <br>
-      Wygląda na to, że znajdujesz się nie tam, gdzie trzeba - nic tu nie ma! :(
+      Hi! <br>
+      This is not the page you're looking for.
     </div>
     <div class="f-pt-1">
       <a-button-primary @click="$router.push(ROUTES.welcome.path)">
-        Przejdź do strony głównej
+        Go to welcome page
       </a-button-primary>
     </div>
   </t-page>

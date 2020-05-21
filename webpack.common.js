@@ -99,8 +99,8 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new webpack.DefinePlugin({
-      APP_NAME: JSON.stringify('HarcMap'),
-      VERSION: JSON.stringify('1.0.0'),
+      APP_NAME: JSON.stringify('Vue Atomic App'),
+      VERSION: JSON.stringify('0.0.1'),
     }),
   ],
 };

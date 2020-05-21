@@ -12,6 +12,8 @@ Vue.config.productionTip = false;
 Vue.mixin({
   computed: {
     ROUTES: () => ROUTES,
+    APP_NAME: () => APP_NAME,
+    VERSION: () => VERSION,
   },
 });
 

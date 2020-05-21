@@ -1,24 +1,13 @@
 <template>
   <t-page :title="ROUTES.about.label" class="f-text-center">
+    <p class="f-text-bold">Project</p>
     <p class="f-text-left">
       <span>
-        <strong>HarcMap</strong> to aplikacja przeznaczona do przeprowadzania gier terenowych dla harcerzy i nie tylko. Pomysłodawcą
-        projektu jest drużynowy z Hufca ZHP Gdynia
-      </span>
-      <span
-        v-if="showMore === false"
-        class="f-text-bold f-text-underline"
-        @click="showMore = true"
-      >
-        pokaż&nbsp;więcej...
-      </span>
-      <span v-else>
-        Dominik Betka, który jest z zawodu programistą. Zebrał on zespół osób z branży,
-        które chciały pomóc w formie wolontariatu. Poniżej możecie poznać ludzi, którzy poświęcili swój czas na stworzenie
-        tak ciekawego projektu. Dziękuję tym osobą za tą ciężką pracę. <strong>:)</strong>
+        <strong>Vue Atomic Template</strong> is example template for web applications using
+        Vue.js and based on Atomic Design.
       </span>
     </p>
-    <p class="f-text-bold">O twórcach</p>
+    <p class="f-text-bold">Authors</p>
     <div
       v-for="person of creators"
       :key="person.fullName"
@@ -67,7 +56,7 @@ export default {
       {
         photo: 'https://media-exp1.licdn.com/dms/image/C4D03AQHIjyVXDRc_Zg/profile-displayphoto-shrink_200_200/0?e=1594252800&v=beta&t=CA74QtuwKhjbrGYe8nIfIVT_FqTV9zrEVqLDRRBbC5g',
         fullName: 'Dominik Betka',
-        responsibilities: 'Lider, Programista front-end',
+        responsibilities: 'Front-end developer',
         links: [
           {
             label: 'GitHub',
@@ -78,36 +67,6 @@ export default {
             path: 'https://www.linkedin.com/in/dominikbetka/',
           },
         ],
-      },
-      {
-        photo: '',
-        fullName: 'Paweł Bednarczyk',
-        responsibilities: 'Programista front-end',
-        links: [],
-      },
-      {
-        photo: '',
-        fullName: 'Paweł Jurkiewicz',
-        responsibilities: 'Programista back-end',
-        links: [],
-      },
-      {
-        photo: '',
-        fullName: 'Filip Betka',
-        responsibilities: 'Programista back-end',
-        links: [],
-      },
-      {
-        photo: '',
-        fullName: 'Magdalena Granke',
-        responsibilities: 'UX Designer',
-        links: [],
-      },
-      {
-        photo: '',
-        fullName: 'Adam Dominik',
-        responsibilities: 'Programista front-end',
-        links: [],
       },
     ],
   }),

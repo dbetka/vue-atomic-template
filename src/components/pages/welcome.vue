@@ -1,12 +1,16 @@
 <template>
   <t-page title="" class="f-text-center">
-    <div class="a-img f-map">
+    <div class="a-img f-logo">
     </div>
     <div>
-      <a-button-primary @click="$router.push(ROUTES.signIn.path)">Logowanie</a-button-primary>
+      <a-button-primary @click="$router.push(ROUTES.about.path)">
+        {{ ROUTES.about.label }}
+      </a-button-primary>
     </div>
     <div>
-      <a-button-secondary @click="$router.push(ROUTES.signUp.path)">Rejestracja</a-button-secondary>
+      <a-button-secondary @click="$router.push('/whatever')">
+        404 Error
+      </a-button-secondary>
     </div>
   </t-page>
 </template>

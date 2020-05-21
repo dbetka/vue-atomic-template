@@ -2,6 +2,11 @@ export const ROUTES = {
   welcome: {
     path: '/',
     name: 'welcome',
-    label: 'Strona startowa',
+    label: 'Start',
+  },
+  about: {
+    path: '/about',
+    name: 'about',
+    label: 'About',
   },
 };
