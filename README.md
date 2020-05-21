@@ -1,6 +1,6 @@
 # vue-atomic-template
 
-> Template for vue-atomic projects.
+> Vue Atomic Template is example template for web applications which are using Vue.js and based on Atomic Design.
 
 ## Build Setup
 
@@ -18,4 +18,4 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/), [docs for vue-loader](http://vuejs.github.io/vue-loader) and [atomic desing idea](https://bradfrost.com/blog/post/atomic-web-design/).
