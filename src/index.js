@@ -3,7 +3,7 @@ import App from './components/app.vue';
 import router from './router';
 import { store } from './store';
 import { ROUTES } from 'utils/macros/routes';
-import { styleManager } from 'utils/style-manager';
+import { styleManager, THEMES } from 'utils/style-manager';
 
 styleManager.init();
 
@@ -12,6 +12,7 @@ Vue.config.productionTip = false;
 Vue.mixin({
   computed: {
     ROUTES: () => ROUTES,
+    THEMES: () => THEMES,
     APP_NAME: () => APP_NAME,
     VERSION: () => VERSION,
   },

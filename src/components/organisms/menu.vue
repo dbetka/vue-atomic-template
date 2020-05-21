@@ -11,14 +11,13 @@
       {{ route.label }}
     </router-link>
     <a class="a-link f-menu" @click="toggleTheme()">
-      {{ themeName === THEMES.light ? 'Ciemny tryb' : 'Jasny tryb' }}
+      {{ themeName === THEMES.light ? 'Dark mode' : 'Light mode' }}
     </a>
   </div>
 </template>
 
 <script>
 import { mapGetters, mapMutations } from 'vuex';
-import { THEMES } from 'utils/style-manager';
 import { ROUTES } from 'utils/macros/routes';
 
 export default {
@@ -26,8 +25,8 @@ export default {
   data: () => ({
     links: [
       ROUTES.welcome,
+      ROUTES.about,
     ],
-    THEMES,
   }),
   computed: {
     ...mapGetters('menu', [
