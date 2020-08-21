@@ -4,6 +4,12 @@ import router from './router';
 import { store } from './store';
 import { ROUTES } from 'utils/macros/routes';
 import { styleManager, THEMES } from 'utils/style-manager';
+import VueAtomic from '../../vue-atomic';
+import '../../vue-atomic/dist/themes/light.css';
+import '../../vue-atomic/dist/index.css';
+
+// Vue.component('new-input', MInput);
+Vue.use(VueAtomic);
 
 styleManager.init();
 

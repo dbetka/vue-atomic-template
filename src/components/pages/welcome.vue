@@ -12,6 +12,16 @@
         404 Error
       </a-button-secondary>
     </div>
+    <div>
+      <m-input
+        v-model="some"
+        class="f-better-font"
+        placeholder="Password"
+        assist="Type password"
+        disabled
+      />
+      <m-textarea v-model="some" placeholder="Password" assist="Type password" />
+    </div>
   </t-page>
 </template>
 
@@ -22,6 +32,9 @@ import AButtonSecondary from 'atoms/button/secondary';
 
 export default {
   name: 'p-welcome',
+  data: () => ({
+    some: '',
+  }),
   components: {
     AButtonSecondary,
     AButtonPrimary,
@@ -29,3 +42,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.a-field.f-better-font {
+  color: blue;
+}
+</style>
