@@ -23,7 +23,7 @@ import IconMenu from 'icons/Menu';
 import IconArrowRight from 'icons/ArrowRight';
 import AButtonIconFooter from 'atoms/button/icon-footer';
 import { ROUTES } from 'utils/macros/routes';
-import { logical } from 'utils/logical';
+import { uCheck } from '@dbetka/utils';
 
 export default {
   name: 'o-footer',
@@ -42,12 +42,12 @@ export default {
       }
     },
     onClick (icon) {
-      if (logical.isString(icon.path) && icon.path !== '') {
+      if (uCheck.isString(icon.path) && icon.path !== '') {
         this.$router.push(icon.path).catch(() => {
           this.$store.commit('menu/close');
         });
       }
-      if (logical.isFunction(icon.method)) {
+      if (uCheck.isFunction(icon.method)) {
         icon.method();
       }
     },

@@ -1,4 +1,4 @@
-import { logical } from 'utils/logical';
+import { uCheck } from '@dbetka/utils';
 
 const vueModel = {
   get () {
@@ -35,7 +35,7 @@ const vuexVModel = (config = {}) => {
       const method = nameOnChangeMethod === '' ? () => undefined : this[nameOnChangeMethod];
 
       this.$store.commit(module + mutation, convertMethods.set(value));
-      if (logical.isFunction(method)) {
+      if (uCheck.isFunction(method)) {
         method();
       }
     },
