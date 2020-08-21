@@ -1,7 +1,7 @@
 {
-  "name": "vue-atomic-demo",
-  "version": "1.0.0",
-  "description": "vue-atomic-demo",
+  "name": "vue-atomic-template",
+  "version": "0.0.1",
+  "description": "vue-atomic-template",
   "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
-    "@dbetka/vue-atomic": "^0.0.5",
+    "@dbetka/vue-atomic": "^0.0.6",
     "@dbetka/utils": "^0.1.0",
     "@material-ui/icons": "^4.9.1",
     "babel-loader": "^8.1.0",
