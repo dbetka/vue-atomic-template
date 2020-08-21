@@ -1,7 +1,6 @@
-import { request } from 'utils/request';
 import { ErrorMessage } from 'utils/error-message';
 import { ERRORS } from 'utils/macros/errors';
-import { logical } from 'utils/logical';
+import { uCheck, uRequest } from '@dbetka/utils';
 
 function catchConnectionError (reject) {
   return function (fetchError) {
@@ -10,13 +9,13 @@ function catchConnectionError (reject) {
 }
 
 function hasError (data) {
-  return logical.isNull(data.error);
+  return uCheck.isNull(data.error);
 }
 
 export const realApi = {
   signIn ({ user, password }) {
     return new Promise((resolve, reject) => {
-      request.post({
+      uRequest.post({
         url: '/user/login',
         data: {
           user,

@@ -54,7 +54,7 @@
 <script>
 import { mixins } from 'mixins/base';
 import IconCancel from 'icons/ArrowDown';
-import { logical } from 'utils/logical';
+import { uCheck } from '@dbetka/utils';
 
 export default {
   name: 'm-select',
@@ -107,7 +107,7 @@ export default {
   },
   methods: {
     resetPointedOption (value = this.vModel) {
-      if (logical.isNull(value)) {
+      if (uCheck.isNull(value)) {
         this.pointedOption = -1;
       } else {
         this.pointedOption = this.options.findIndex(option => option.value === value);
@@ -146,7 +146,7 @@ export default {
       }
     },
     chooseOption ({ value, index }) {
-      if (logical.isDefined(index)) {
+      if (uCheck.isDefined(index)) {
         value = this.options[index].value;
       }
 
