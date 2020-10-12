@@ -5,13 +5,13 @@ import { store } from './store';
 import { ROUTES } from 'utils/macros/routes';
 import { styleManager, THEMES } from 'utils/style-manager';
 
-// import VueAtomic from '../../vue-atomic';
-// import '../../vue-atomic/dist/themes/light.css';
-// import '../../vue-atomic/dist/index.css';
+import VueAtomic from '../../vue-atomic';
+import '../../vue-atomic/dist/themes/light.css';
+import '../../vue-atomic/dist/index.css';
 
-import VueAtomic from '@dbetka/vue-atomic';
-import '@dbetka/vue-atomic/dist/themes/light.css';
-import '@dbetka/vue-atomic/dist/index.css';
+// import VueAtomic from '@dbetka/vue-atomic';
+// import '@dbetka/vue-atomic/dist/themes/light.css';
+// import '@dbetka/vue-atomic/dist/index.css';
 
 Vue.use(VueAtomic);
 
