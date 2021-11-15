@@ -1,15 +1,65 @@
 {
   "name": "{{name}}",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "{{description}}",
-  "main": "index.js",
+  "main": "src/index.ts",
   "author": "{{author}}",
   "license": "MIT",
-  "private": false,
   "scripts": {
-    "start": "http-server ./ -p 3000"
+    {{#if_eq build "standalone"}}
+    "unit": "jest --config test/unit/jest.conf.js --coverage",
+    {{/if_eq}}
+    "serve:dev:watch": "npx webpack serve --config webpack.dev.js",
+    "build:dev": "npx webpack --config webpack.dev.js",
+    "build:dev:watch": "npx webpack --config webpack.dev.js --watch",
+    "build:prod": "npx webpack --config webpack.prod.js",
+    "build:prod:watch": "npx webpack --config webpack.prod.js --watch",
+    "import:sass:watch": "sass-watcher --config sass-watcher.json"
   },
   "dependencies": {
-    "http-server": "^0.11.1"
+    "@dbetka/sass-watcher": "^0.1.5",
+    "@dbetka/vue-material-icons": "^0.3.0",
+    "@dbetka/wdk": "^0.1.5",
+    "vue": "^3.2.22",
+    {{#if_eq i18n true}}
+    "vue-i18n": "^9.2.0-beta.17",
+    {{/if_eq}}
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@types/resize-observer-browser": "^0.1.6",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "@vue/compiler-sfc": "^3.2.21",
+    "@vue/eslint-config-standard": "^6.1.0",
+    "@vue/eslint-config-typescript": "^8.0.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-builtin-extend": "^1.1.2",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-vue": "^7.19.1",
+    "eslint-webpack-plugin": "^3.0.1",
+    "glob": "^7.1.6",
+    "html-webpack-plugin": "^5.3.2",
+    "sass": "^1.35.2",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.3",
+    "url-loader": "^4.1.1",
+    "vue-loader": "^16.8.3",
+    "webpack": "^5.49.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.5.0",
+    "webpack-merge": "^5.8.0"
   }
 }

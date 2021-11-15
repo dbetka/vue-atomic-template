@@ -1,0 +1,13 @@
+{
+  "name": "vue-atomic-template",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "A full-featured Vue Atomic TypeScript setup with dev-server, lint-on-save, and SASS.",
+  "scripts": {
+    "docs": "cd docs && gitbook serve",
+    "docs:deploy": "bash ./deploy-docs.sh"
+  },
+  "devDependencies": {
+    "vue-cli": "^2.9.6"
+  }
+}

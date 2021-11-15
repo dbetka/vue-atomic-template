@@ -1,0 +1,4 @@
+{
+  "input-dir": "src/style/auto-import",
+  "output": "src/style/__cache__/index.sass"
+}
