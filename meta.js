@@ -33,25 +33,21 @@ module.exports = {
    */
   prompts: {
     name: {
-      when: 'isNotTest',
       type: 'string',
       required: true,
       message: 'Project name',
     },
     description: {
-      when: 'isNotTest',
       type: 'string',
       required: false,
       message: 'Project description',
       default: 'A Vue Atomic project',
     },
     author: {
-      when: 'isNotTest',
       type: 'string',
       message: 'Author',
     },
     build: {
-      when: 'isNotTest',
       type: 'list',
       message: 'Vue build',
       choices: [
@@ -68,7 +64,6 @@ module.exports = {
       ],
     },
     i18n: {
-      when: 'isNotTest',
       type: 'list',
       message: 'Translations (i18n)',
       choices: [
@@ -85,10 +80,8 @@ module.exports = {
       ],
     },
     autoInstall: {
-      when: 'isNotTest',
       type: 'list',
-      message:
-        'Should we run `npm install` for you after the project has been created? (recommended)',
+      message: 'Should we run `npm install` for you after the project has been created? (recommended)',
       choices: [
         {
           name: 'Yes, use NPM',
