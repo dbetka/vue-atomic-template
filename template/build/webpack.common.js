@@ -3,8 +3,8 @@ const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
-const webpackRules = require('./webpack/rules').rules
-const webpackUtils = require('./webpack/utils')
+const webpackRules = require('./rules').rules
+const webpackUtils = require('./utils')
 const resolve = webpackUtils.resolve
 
 const AppName = 'Whatusea'
