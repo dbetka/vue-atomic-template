@@ -7,13 +7,12 @@
   "license": "MIT",
   "scripts": {
     {{#if_eq build "standalone"}}
-    "unit": "jest --config test/unit/jest.conf.js --coverage",
+    "serve:dev:watch": "npx webpack serve --config build/webpack.dev.js",
     {{/if_eq}}
-    "serve:dev:watch": "npx webpack serve --config webpack.dev.js",
-    "build:dev": "npx webpack --config webpack.dev.js",
-    "build:dev:watch": "npx webpack --config webpack.dev.js --watch",
-    "build:prod": "npx webpack --config webpack.prod.js",
-    "build:prod:watch": "npx webpack --config webpack.prod.js --watch",
+    "build:dev": "npx webpack --config build/webpack.dev.js",
+    "build:dev:watch": "npx webpack --config build/webpack.dev.js --watch",
+    "build:prod": "npx webpack --config build/webpack.prod.js",
+    "build:prod:watch": "npx webpack --config build/webpack.prod.js --watch",
     "import:sass:watch": "sass-watcher --config sass-watcher.json"
   },
   "dependencies": {
