@@ -14,7 +14,7 @@ const publicPath = 'public'
 module.exports = {
   mode: 'development',
   entry: {
-    main: 'src/main.ts',
+    main: 'src/index.ts',
   },
   optimization: {
     splitChunks: {
